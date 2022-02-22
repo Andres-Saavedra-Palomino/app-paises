@@ -1,0 +1,18 @@
+<div *ngIf="!pais; else divPais" class="alert alert-info">Cargando ...</div>
+
+<ng-template class="" #divPais>
+  <div class="row">
+    <div class="col-12">
+      <h1>Pais: {{ pais.name.common }}</h1>
+      <hr />
+      <img [src]="pais.flags.svg" style="height: 100px" alt="" class="row" />
+      <span class="h4 my-3 row">Informacion</span>
+      <p class="row text-justify">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+        temporibus adipisci sunt possimus in nulla quod neque eveniet
+        accusantium ducimus provident quos iure mollitia id aliquid, ipsum
+        praesentium voluptatibus facere.
+      </p>
+    </div>
+  </div>
+</ng-template>

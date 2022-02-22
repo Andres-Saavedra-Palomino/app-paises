@@ -1,0 +1,9 @@
+<app-titulo-pais [titulo]="titulo"></app-titulo-pais>
+<app-input-pais
+  (onEnter)="buscar($event)"
+  (onDebounce)="sugerencias($event)"
+></app-input-pais>
+<div *ngIf="hayError" class="alert alert-danger my-3">
+  No se encontraron resultados
+</div>
+<app-tabla-pais *ngIf="!hayError" [paises]="paises"></app-tabla-pais>

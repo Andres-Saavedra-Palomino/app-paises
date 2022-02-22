@@ -1,0 +1,9 @@
+<form [formGroup]="formPais">
+  <input
+    type="text"
+    formControlName="dato"
+    class="form-control"
+    (keydown.enter)="buscar()"
+    (input)="teclaPresionada()"
+  />
+</form>
